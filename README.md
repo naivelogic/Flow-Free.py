@@ -11,5 +11,31 @@ Objective: Find out the most efficient way of finding the shortest path between 
 
 Solution: Return a list with the tiles coordinates searched when looking for goal node. 
 
-<div class="separator" style="clear: both; text-align: center;">
-<object class="BLOGGER-youtube-video" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" data-thumbnail-src="https://ytimg.googleusercontent.com/vi/JXyli5UzH10/0.jpg" height="266" width="320"><param name="movie" value="https://youtube.googleapis.com/v/JXyli5UzH10&source=uds" /><param name="bgcolor" value="#FFFFFF" /><param name="allowFullScreen" value="true" /><embed width="320" height="266"  src="https://youtube.googleapis.com/v/JXyli5UzH10&source=uds" type="application/x-shockwave-flash" allowfullscreen="true"></embed></object></div>
+>>>> Here is a video that will assist in implementing in Python. Check it out here: http://youtu.be/JXyli5UzH10
+<iframe width="420" height="315" src="//www.youtube.com/embed/JXyli5UzH10" frameborder="0" allowfullscreen></iframe>
+
+
+Color Connect Algorithm [CCA]: A Recursive Walk
+
+
+
+My strategy was use a nested list of integers to represent the map locations maze as an adjacent matrix. 
+Identify and map each dot and their corresponding dot.
+Path1 list = starting point
+Path2 list = ending point
+Use a nested list of numbers to visualize as the Flow Free map. 
+The values used in the maze are the following:
+0: empty cells
+-1: Noncurrent starting or ending points
+1: Starting Point
+'x': Ending Point
+
+Start from the current starting point that is set to '1' and move recursively to all of its 0 neighbors and set to '2'. Append to all 2's to the list. Then mark all of the '0' neighbors of '2' to '3' and append to the list. This will recursively happen until the destination of cell 'x' is reached.
+
+When cell 'x' has been reached, we know have found the path from our starting dot to the ending dot. To find our way back we will again recursively move from 'x'-1 until we have reached 1=1. There should only be one cell that is marked with a '1'. 
+
+
+Save path and move to the next starting and ending point in the list still path1|2 is empty. 
+
+
+For an indepth explination view my blog here: http://plhale.blogspot.com/2014/11/flow-free-color-connect-solution-5x5.html 
