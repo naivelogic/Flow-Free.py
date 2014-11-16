@@ -1,4 +1,4 @@
-Flow-Free-
+Flow-Free
 ==========
 
 How to play Flow Free  
